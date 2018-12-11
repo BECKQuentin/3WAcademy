@@ -20,5 +20,52 @@ rec.addEventListener('mouseover', classImp);
 rec.addEventListener('mouseout', classImp);
 rec.addEventListener('dblclick', classGood);
 
+/*
 
+/*************************************************************************************************/
+/* ***************************************** CORRECTION ***************************************** */
+/*************************************************************************************************
+
+var button = document.getElementById('toggle-rectangle');
+var rectangle = document.querySelector('.rectangle');
+
+
+/*************************************************************************************************/
+/* ***************************************** FONCTIONS ***************************************** */
+/*************************************************************************************************
+
+function onClickButton() {
+    rectangle.classList.toggle('hide');
+}
+
+
+function onDoubleClickRectangle() {
+    rectangle.classList.toggle('good');
+
+}
+
+function onMouseOverRectangle() {
+
+    rectangle.classList.add('important');
+}
+
+function onMouseOutRectangle() {
+    rectangle.classList.remove('good');
+    rectangle.classList.remove('important');
+}
+
+
+/*************************************************************************************************/
+/* ************************************** CODE PRINCIPAL *************************************** */
+/*************************************************************************************************
+
+
+button.addEventListener('click', onClickButton);
+
+rectangle.addEventListener('dblclick', onDoubleClickRectangle);
+
+rectangle.addEventListener('mouseout', onMouseOutRectangle);
+rectangle.addEventListener('mouseover', onMouseOverRectangle);
+
+*/
 
