@@ -107,11 +107,11 @@ function gameLoop(firstPlayer) {
 }
 function showWinner(){
 if (gameElement.PVDragon <= 0) {
-        document.write('<img src="images/knight.jpg" id="knight" alt="knight">')
+        document.write('<img src="images/knight.png" id="knight" alt="knight">')
         console.log('Vous avez terrassé le terrible Javawan the Bug et délivrez la princesse ! Il vous restait ' + gameElement.PVChevalier + ' points de vie.')
 
     } else {
-        document.write('<img src="images/dragon.jpg" id="dragon" alt="dragon">')
+        document.write('<img src="images/dragon.png" id="dragon" alt="dragon">')
         console.log('Javawan the Bug a gagné, vous avez été carbonisé ! La princesse restera sa captive pour les 1000 ans à venir. Il restait ' + gameElement.PVDragon + ' points de vie au dragon.')
     }
 }
