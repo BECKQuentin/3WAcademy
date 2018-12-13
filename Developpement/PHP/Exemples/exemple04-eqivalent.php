@@ -4,7 +4,7 @@
 $name = 'Thibaut';
 
 var_dump($name);
-
+//equivalent de console.log
 echo 'Salut '.$name;
 //echo = document.write et . = concatenation
 ?>
