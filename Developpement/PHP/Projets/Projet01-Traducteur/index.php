@@ -37,5 +37,3 @@ if (array_key_exists('word', $_POST)){
 include "header.phtml";
 include "index.phtml";
 ?>
-
-
