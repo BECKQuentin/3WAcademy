@@ -22,13 +22,11 @@ function keyEvent() {
             positiontopbotom += 10;
         carre.style.top = positiontopbotom + "px";
         break;
-            
+
         case 39: //right
             positionrightleft -= 10;
             carre.style.right = positionrightleft + "px";
             break;
-
-
         case 37: //left
             positionrightleft += 10;
             carre.style.right = positionrightleft + "px";
@@ -38,12 +36,7 @@ function keyEvent() {
     }
 }
 
-
-
-
 carre.addEventListener("dblclick", color);
-
-
 carre.addEventListener("click", init);
 window.addEventListener("keydown", keyEvent);
 
