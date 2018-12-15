@@ -1,0 +1,352 @@
+/* GENERAL */
+*{
+    background: #f9f9f9;
+}
+main{
+    width: 450px;
+    margin: 0 auto;
+}
+h1, h3{
+    text-align: center;
+}
+h1{
+    font-size: 35px;
+}
+h2{
+    font-size: 25px;
+    color: green;
+}
+h3{
+    font-size: 20px;
+    color: rgb(182, 60, 60);
+}
+ul {
+    margin: 2em;
+    padding: 0;
+    list-style: none;
+    border: 1px solid black;
+}
+
+li {
+    padding: 1em;
+}
+
+li:nth-child(1) {
+    background: #ffeaa7;
+}
+
+li:nth-child(2) {
+    background: #55efc4;
+}
+
+li:nth-child(3) {
+    background: #81ecec;
+}
+
+li:nth-child(4) {
+    background: #74b9ff;
+}
+
+li:nth-child(5) {
+    background: #a29bfe;
+}
+
+li:nth-child(6) {
+    background: #fab1a0;
+}
+
+/*  DISPLAY*/
+.displayflex {
+    display: flex;
+}
+
+.displayinlineflex {
+    display: inline-flex;
+}
+
+
+
+/* FLEX-DIRECTION */
+
+.flexdirectionrow {
+    display: flex;
+    flex-direction: row;
+}
+
+.flexdirectionrowreverse {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.flexdirectioncolumn {
+    display: flex;
+    flex-direction: column;
+}
+
+.flexdirectioncolumnreverse {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+
+
+/* FLEX-WRAP */
+.nowrap {
+    display: flex;
+    width: 200px;
+    flex-wrap: nowrap;
+}
+
+.wrap {
+    display: flex;
+    width: 200px;
+    flex-wrap: wrap;
+}
+
+.wrapreverse {
+    display: flex;
+    width: 200px;
+    flex-wrap: wrap-reverse;
+}
+
+
+/* FLEX-FLOW */
+.flexflow {
+    display: flex;
+    width: 200px;
+    flex-flow: row nowrap;
+}
+
+
+/* JUSTIFY-CONTENT */
+.JCflexstart {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.JCflexend {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.JCcenter {
+    display: flex;
+    justify-content: center;
+}
+
+.JCspacebetween {
+    display: flex;
+    justify-content: space-between;
+}
+
+.JCspacearound {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+
+/* ALIGN-ITEMS */
+
+.AIstretch {
+    display: flex;
+    align-items: stretch;
+}
+
+.AIstretch li:nth-child(odd) {
+    line-height: 3em;
+}
+
+.AIflexstart {
+    display: flex;
+    align-items: flex-start;
+}
+
+.AIflexstart li:nth-child(odd) {
+    line-height: 3em;
+}
+
+.AIflexend {
+    display: flex;
+    align-items: flex-end;
+}
+
+.AIflexend li:nth-child(odd) {
+    line-height: 3em;
+}
+
+.AIcenter {
+    display: flex;
+    align-items: center;
+}
+
+.AIcenter li:nth-child(odd) {
+    line-height: 3em;
+}
+
+.baseline {
+    display: flex;
+    align-items: baseline;
+}
+
+.baseline li:nth-child(odd) {
+    line-height: 3em;
+}
+
+
+
+
+
+/* ALIGN-CONTENT */
+
+.ACstretch {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+}
+
+.ACflexstart {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.ACflexend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.ACcenter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.ACspacebetween {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.ACspacearound {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+
+
+
+
+
+/* ORDER */
+.order {
+    display: flex;
+}
+
+.order li:nth-child(1) {
+    order: 3;
+}
+
+.order li:nth-child(2) {
+    order: 5;
+}
+
+.order li:nth-child(3) {
+    order: 1;
+}
+
+.order li:nth-child(4) {
+    order: 6;
+}
+
+.order li:nth-child(5) {
+    order: 4;
+}
+
+.order li:nth-child(6) {
+    order: 2;
+}
+
+
+/* ALIGN-ITEMS */
+.ASauto {
+    display: flex;
+    align-items: stretch;
+}
+
+.ASauto li:nth-child(1) {
+    line-height: 2em;
+    align-self: auto;
+    font-weight: bold;
+}
+
+.ASstretch {
+    display: flex;
+    align-items: stretch;
+}
+
+.ASstretch li:nth-child(3) {
+    line-height: 2em;
+    align-self: stretch;
+    font-weight: bold;
+}
+
+.ASflexstart {
+    display: flex;
+    align-items: stretch;
+}
+
+.ASflexstart li:nth-child(2) {
+    line-height: 2em;
+    align-self: flex-start;
+    font-weight: bold;
+}
+
+.ASflexend {
+    display: flex;
+    align-items: stretch;
+
+}
+
+.ASflexend li:nth-child(4) {
+    line-height: 3em;
+    align-self: flex-end;
+    font-weight: bold;
+}
+
+.AScenter {
+    display: flex;
+    align-items: stretch;
+}
+
+.AScenter li:nth-child(5) {
+    line-height: 3em;
+    align-self: center;
+    font-weight: bold;
+}
+
+.ASbaseline {
+    display: flex;
+    align-items: stretch;
+}
+
+.ASbaseline li:nth-child(5) {
+    line-height: 3em;
+    align-self: baseline;
+    font-weight: bold;
+}
+
+
+/* FLEX-SHRINK */
+
+.flex {
+    display: flex;
+}
+
+.flex li:nth-child(2) {
+    flex: 0 1 1;
+    font-weight: bold;
+}
