@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="styleStep3.css">
+</head>
+
+<body>
+    <main>
+        <h1>Flex</h1>
+        <h2>Base</h2>
+        <p><strong>flex-container</strong> : créer le context général d'affichage pour ses enfants <br>
+            <strong>flex-item</strong> : enfants direct du conteur.</p>
+        <h2>Propriété sur le parent</h2>
+
+        <h3>Display</h3>
+        <p><strong>display : flex</strong> = deveint un flex-container et ce comporte comme un block </p>
+        <ul class="displayflex">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+            <li>F</li>
+        </ul>
+
+        <p><strong>display : inline-flex</strong> = flex-container et ce comporte comme un inline-block</p>
+        <ul class="displayinlineflex">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+        </ul>
+
+        <ul class="displayinlineflex">
+            <li>D</li>
+            <li>E</li>
+            <li>F</li>
+        </ul>
+        <h3>Flex-Direction</h3>
+        <p><strong>flex-direction : row</strong> Alignement horizontal des flex-item (valeur par défault)</p>
+        <ul class="flexdirectionrow">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+            <li>F</li>
+        </ul>
+        <p><strong>flex-direction : row-reverse</strong> Alignement horizontal inversé</p>
+        <ul class="flexdirectionrowreverse">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+            <li>F</li>
+        </ul>
+        <p><strong>flex-direction : column</strong> Alignement vertical</p>
+        <ul class="flexdirectioncolumn">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+            <li>F</li>
+        </ul>
+        <p><strong>flex-direction : column-reverse</strong> Alignement vertical inversé</p>
+        <ul class="flexdirectioncolumnreverse">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+            <li>F</li>
+        </ul>
+
+
+
+        <h3>Flex-Wrap</h3>
+        <p><strong>flex-wrap : nowrap</strong> Les éléments flex-item ne passent pas à la ligne (valeur par défault)</p>
+        <ul class="nowrap">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+            <li>F</li>
+        </ul>
+        <p><strong>flex-wrap : wrap</strong> Les éléments flex-item passent à la ligne</p>
+        <ul class="wrap">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+            <li>F</li>
+        </ul>
+        <p><strong>flex-wrap : wrap-reverse</strong> Les éléments flex-item passent à la ligne dans un sens inversé</p>
+        <ul class="wrapreverse">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+            <li>F</li>
+        </ul>
+
+
+        <h3>Flex-flow</h3>
+        <p><strong>flex-flow : row nowrap</strong> Propriété raccourcie de flex-direction et flex-wrap, toutes les
+            associations sont possible celle ci est la valeur par défault</p>
+        <ul class="flexflow">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+            <li>F</li>
+        </ul>
+
+
+
+        <h3>Justify-Content</h3>
+        <p><strong>justify-content: flex-start</strong> Elément positionné au début de l'axe principale (valeur par
+            défault)</p>
+        <ul class="JCflexstart">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+            <li>F</li>
+        </ul>
+        <p><strong>justify-content: flex-end</strong> Elément positionné à la fin de l'axe principale</p>
+        <ul class="JCflexend">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+            <li>F</li>
+        </ul>
+        <p><strong>justify-content: center</strong> Elément centré dans l'axe principale</p>
+        <ul class="JCcenter">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+            <li>F</li>
+        </ul>
+        <p><strong>justify-content: space-between</strong> Eléméent répartie de façon "justifié"</p>
+        <ul class="JCspacebetween">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+            <li>F</li>
+        </ul>
+        <p><strong>justify-content: space-around</strong> Variante de répartition justifié</p>
+        <ul class="JCspacearound">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+            <li>F</li>
+        </ul>
+
+
+
+        <h3>Align-Items</h3>
+        <p><strong>align-items: stretch</strong> Elément étirés dans l'espace disponible (valeur par défault)</p>
+        <ul class="AIstretch">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+            <li>F</li>
+        </ul>
+        <p><strong>align-items: flex-start</strong> Elément disposés au début de l'axe secondaire</p>
+        <ul class="AIflexstart">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+            <li>F</li>
+        </ul>
+        <p><strong>align-items: flex-end</strong> Elément disposés à la fin de l'axe secondaire</p>
+        <ul class="AIflexend">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+            <li>F</li>
+        </ul>
+        <p><strong>align-items: center</strong> Eléméent centré dans l'axe secondaire</p>
+        <ul class="AIcenter">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+            <li>F</li>
+        </ul>
+        <p><strong>align-items: baseline</strong> Element aligné sur la ligne de base du text</p>
+        <ul class="baseline">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+            <li>F</li>
+        </ul>
+
+        <h3>Align-Content</h3>
+        <p>Ne fonctionne que si le contneur autorise la passage à la ligne (flex-wrap : wrap</p>
+        <p><strong>align-content: stretch</strong> Les rangés occupent tous l'espace disponible (valeur par défault)</p>
+        <ul class="ACstretch">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+            <li>F</li>
+        </ul>
+        <p><strong>align-content: flex-start</strong> Les rangées s'affichent au début du flex-container</p>
+        <ul class="ACflexstart">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+            <li>F</li>
+        </ul>
+        <p><strong>align-content: flex-end</strong> Les rangées s'affichent à la fin du flex-container</p>
+        <ul class="ACflexend">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+            <li>F</li>
+        </ul>
+        <p><strong>align-content: center</strong> Les rangées s'affichent au centre du flex-container</p>
+        <ul class="ACcenter">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+            <li>F</li>
+        </ul>
+        <p><strong>align-content: space-between</strong> L'espace entre les rangées est répartie de façon "justifié"</p>
+        <ul class="ACspacebetween">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+            <li>F</li>
+        </ul>
+        <p><strong>align-content: space-around</strong> Variante de space-between</p>
+        <ul class="ACspacearound">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+            <li>F</li>
+        </ul>
+
+
+        <h2>Propriété sur les enfants</h2>
+
+        <h3>Order</h3>
+        <p><strong>order</strong>Permet de réordonner les éléments, l'élément ayant le chiffre le plus grand sera à la
+            fin et les chiffres négatif seront prioritére</p>
+        <ul class="order">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+            <li>F</li>
+        </ul>
+
+
+        <h3>Align-Self</h3>
+        <p>Permet de distinguer l'alignement d'un item de ses fréres</p>
+        <p><strong>align-self: auto</strong>Adopte l'alignement général définit par align-items (valeur par défault)</p>
+        <ul class="ASauto">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+            <li>F</li>
+        </ul>
+        <p><strong>align-self: stretch</strong> Elément étirés dans l'espace disponible</p>
+        <ul class="ASstretch">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+            <li>F</li>
+        </ul>
+        <p><strong>align-self: flex-start</strong> Elément disposés au début de l'axe secondaire</p>
+        <ul class="ASflexstart">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+            <li>F</li>
+        </ul>
+        <p><strong>align-self: flex-end</strong> Elément disposés à la fin de l'axe secondaire</p>
+        <ul class="ASflexend">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+            <li>F</li>
+        </ul>
+        <p><strong>align-self: center</strong> Eléméent centré dans l'axe secondaire</p>
+        <ul class="AScenter">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+            <li>F</li>
+        </ul>
+        <p><strong>align-self: baseline</strong> Element aligné sur la ligne de base du text</p>
+        <ul class="ASbaseline">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+            <li>F</li>
+        </ul>
+
+        <h3>Flex</h3>
+        <p>prorpiété contenant les trois suivant et s'appliquant aux flex-item</p>
+        <p><strong>flex-grow</strong> permet a un flex-item de s'élargir pour occuper une proportion de l'espace libre
+            restant, pour rendre un elemnt flexible lui attribuer un chiffre supérieur à zéro</p>
+        <p><strong>flex-shrink</strong>Permet à un flex-item de se compreser automatoiquemnt s'in n'y a pas assez de
+            place</p>
+        <p><strong>flex-basis</strong> taille initial de l'élément avnat que l'espace ne soit distribué</p>
+
+        <ul class="flex">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+            <li>E</li>
+            <li>F</li>
+        </ul>
+    </main>
+</body>
+
+</html>

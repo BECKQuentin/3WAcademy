@@ -1,4 +1,4 @@
-<!-------  exemple.php ------------->
+<!-- -----  exemple.php ----------- -->
 
 <!DOCTYPE html>
 <html lang="fr">
