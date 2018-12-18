@@ -1,0 +1,117 @@
+/* ******** Var */
+$colorDarkGrey: #808080;
+$colorGrey : #E9EAEC;
+$colorpink : #F8315A;
+$borderBottom: 1px solid #E9EAEC;
+* {
+    box-sizing: border-box;
+}
+body{
+    background-image: url(../img/fond.png);
+    max-width: 1100px;
+}
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* MIXIN */
+
+/*
+p: 18px nav : 20px logo et h1 : 40px 
+h2 : 35px h3 des compétences : 30px icone : 25px input et textarea : 16px
+*/
+h1 {
+    color: $colorDarkGrey;
+    font-size: 40px;
+    margin: 0;
+}
+
+h2{
+    font-size: 35px;
+    text-align: center;
+    color: $colorpink;
+    border-bottom: $borderBottom;
+    line-height: 2em; 
+}
+h3{
+    color: $colorpink;
+
+}
+p{
+    font-size: 18px;
+    color: $colorDarkGrey;
+} 
+a{
+    text-decoration: none;
+    color: $colorDarkGrey;
+    font-size: 20px
+}
+
+
+/****** HEADER *********/
+header, header>div:nth-of-type(1){
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around
+}
+
+header img{
+    width: 50px;
+}
+
+
+/***** ACCUEIL ******/
+#accueil{
+    background-image: url(../img/bg_header.png);
+
+}
+#accueil h2{
+    color: white;
+    text-align: center;
+    border: none;
+}
+#accueil p{
+    color: white;
+    text-align: center;
+}
+
+.buttonDiscovert{
+    width: 10rem;
+    background: $colorpink;
+    border-radius: 5px;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+}
+
+/***** COMPETENCES ******/
+#skills>div,
+#services>div {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+#skills span {
+    font-size: 30px;
+}
+
+/*****  FORM *****/
+
+input[type="text"],
+input[type="mail"]{
+    width: 50%;
+    
+}
+input[type="textarea"]{
+    width: 100%;
+}
+form{
+    display: flex;
+}
+input[type="submit"]{
+    background: $colorpink;
+    flex-wrap: wrap;
+}

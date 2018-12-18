@@ -1,0 +1,130 @@
+@charset "UTF-8";
+/* ******** Var */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-image: url(../img/fond.png);
+  max-width: 1100px;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* MIXIN */
+/*
+p: 18px nav : 20px logo et h1 : 40px 
+h2 : 35px h3 des compétences : 30px icone : 25px input et textarea : 16px
+*/
+h1 {
+  color: #808080;
+  font-size: 40px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 35px;
+  text-align: center;
+  color: #F8315A;
+  border-bottom: 1px solid #E9EAEC;
+  line-height: 2em;
+}
+
+h3 {
+  color: #F8315A;
+}
+
+p {
+  font-size: 18px;
+  color: #808080;
+}
+
+a {
+  text-decoration: none;
+  color: #808080;
+  font-size: 20px;
+}
+
+/****** HEADER *********/
+header, header > div:nth-of-type(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+header img {
+  width: 50px;
+}
+
+/***** ACCUEIL ******/
+#accueil {
+  background-image: url(../img/bg_header.png);
+}
+
+#accueil h2 {
+  color: white;
+  text-align: center;
+  border: none;
+}
+
+#accueil p {
+  color: white;
+  text-align: center;
+}
+
+.buttonDiscovert {
+  width: 10rem;
+  background: #F8315A;
+  border-radius: 5px;
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+}
+
+/***** COMPETENCES ******/
+#skills > div,
+#services > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+}
+
+#skills span {
+  font-size: 30px;
+}
+
+/*****  FORM *****/
+input[type="text"],
+input[type="mail"] {
+  width: 50%;
+}
+
+input[type="textarea"] {
+  width: 100%;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+input[type="submit"] {
+  background: #F8315A;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+/*# sourceMappingURL=style.css.map */
