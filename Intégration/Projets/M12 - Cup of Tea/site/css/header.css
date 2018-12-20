@@ -1,0 +1,115 @@
+/* *************** HEADER *************** */
+.header {
+    background-image: url(../img/bg.jpg);
+    color: #fff;
+}
+
+.header a {
+
+    line-height: 2em;
+    text-decoration: none;
+}
+
+.header_p-iromo {
+    margin: 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.1)
+}
+
+.header_ribbon {
+    background: url(../img/ribbon.svg) no-repeat right;
+    padding: 80px;
+    position: absolute;
+    width: 100%;
+}
+
+.header_div-init {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.header_logo {
+    width: 25%;
+    height: auto;
+}
+
+.header_div-basket {
+    text-align: center;
+    width: 25%;
+}
+
+.header_div-basket-name,
+.header_div-basket-price {
+    color: #fff;
+}
+
+.header_div-basket-icon {
+    color: rgba(265, 265, 265, 0.6);
+    border: 1px solid rgba(265, 265, 265, 0.6);
+    border-radius: 100%;
+    font-size: 13px;
+    padding: 3px;
+    width: 30px;
+}
+
+.header_navbar {
+    display: flex;
+    justify-content: space-between
+}
+
+.header_navbar a {
+    color: #fff;
+    line-height: 4em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+@media screen and (max-width: 768px) {
+    .header_ribbon{
+        padding: 50px;
+    }
+    .header_div-init,
+    .header_navbar {
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .header_ribbon {
+        display: none;
+    }
+
+    .header_div-init {
+        flex-direction: column-reverse;
+        padding: 0;
+    }
+
+    body>header>div.conteneur>div>img {
+        width: 300px;
+        margin: 0 auto;
+}
+
+    .header_div-basket-name {
+        display: none;
+    }
+
+    .header_div-basket {
+        display: flex;
+        justify-content: space-around;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-left: none;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        margin: 20px 0;
+        -webkit-box-shadow: 0px 0px 53px -3px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 0px 0px 53px -3px rgba(0, 0, 0, 0.3);
+        box-shadow: 0px 0px 53px -3px rgba(0, 0, 0, 0.3);
+
+    }
+
+    .header_navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}

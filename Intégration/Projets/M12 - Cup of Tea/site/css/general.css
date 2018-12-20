@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 40px;
+
+}
+
+h2 {
+    font-size: 25px;
+
+}
+
+h3 {
+    font-size: 20px;
+
+
+}
+
+.conteneur {
+    margin: 0 auto;
+    max-width: 1100px;
+}
