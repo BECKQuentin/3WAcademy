@@ -1,0 +1,53 @@
+@import "config.scss";
+
+.mainHome h1 {
+    @include greenTxtCenter;
+}
+
+.mainHome_p-sub-text {
+    text-align: center;
+    font-size: 10px;
+}
+
+.flex-nav-prev {
+    display: none;
+}
+
+.mainHome_article-tea-chose {
+    background-color: $colorWhite;
+    margin: 20px 0;
+    padding: 20px;
+
+
+}
+
+.mainHome_div-tea-chose {
+    @include flexColumn;
+    text-align: center;
+}
+
+.mainHome h2 {
+    @include greenTxtCenter;
+}
+
+.mainHome_section-tea {
+    @include flexColumn;
+    background-color: $colorWhite;
+    text-align: center;
+    margin: 20px 0;
+    padding: 20px;
+
+
+
+}
+
+.mainHome_button-see-product span {
+    font-weight: bold;
+}
+
+.mainHome_button-see-product a {
+    text-transform: $txtTransforme;
+    text-decoration: none;
+    color: $colorWhite;
+    @include buttonProduct
+}

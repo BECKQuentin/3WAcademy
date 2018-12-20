@@ -1,0 +1,23 @@
+/* ******* VAR ******* */
+$colorWhite : #fff;
+$colorGeen: #94af30;
+$txtTransforme : uppercase;
+
+
+/* ******* MIXIN ******* */
+@mixin greenTxtCenter {
+    text-align: center;
+    color: $colorGeen;
+
+}
+
+@mixin flexColumn {
+    display: flex;
+    justify-content: space-around;
+}
+
+@mixin buttonProduct {
+    width: 70%;
+    background-color : #b09067;
+    padding: 10px;
+}

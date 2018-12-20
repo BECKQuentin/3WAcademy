@@ -1,0 +1,54 @@
+/* ******* VAR ******* */
+/* ******* MIXIN ******* */
+/* ******* VAR ******* */
+/* ******* MIXIN ******* */
+/* ******* VAR ******* */
+/* ******* MIXIN ******* */
+.mainHome h1 {
+  text-align: center;
+  color: #94af30; }
+
+.mainHome_p-sub-text {
+  text-align: center;
+  font-size: 10px; }
+
+.flex-nav-prev {
+  display: none; }
+
+.mainHome_article-tea-chose {
+  background-color: #fff;
+  margin: 20px 0;
+  padding: 20px; }
+
+.mainHome_div-tea-chose {
+  display: flex;
+  justify-content: space-around;
+  text-align: center; }
+
+.mainHome h2 {
+  text-align: center;
+  color: #94af30; }
+
+.mainHome_section-tea {
+  display: flex;
+  justify-content: space-around;
+  background-color: #fff;
+  text-align: center;
+  margin: 20px 0;
+  padding: 20px; }
+
+.mainHome_button-see-product span {
+  font-weight: bold; }
+
+.mainHome_button-see-product a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  width: 70%;
+  background-color: #b09067;
+  padding: 10px; }
+
+/* ******* VAR ******* */
+/* ******* MIXIN ******* */
+
+/*# sourceMappingURL=style.css.map */
