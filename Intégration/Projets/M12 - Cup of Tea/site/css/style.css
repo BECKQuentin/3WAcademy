@@ -23,7 +23,8 @@
 .mainHome_div-tea-chose {
   display: flex;
   justify-content: space-around;
-  text-align: center; }
+  text-align: center;
+  flex-wrap: wrap; }
 
 .mainHome h2 {
   text-align: center;
@@ -48,6 +49,13 @@
   background-color: #b09067;
   padding: 10px; }
 
+@media screen and (max-width: 768px) {
+  .mainHome_section-tea {
+    flex-direction: column; } }
+@media screen and (max-width: 480px) {
+  .mainHome-header,
+  .flexslider {
+    display: none; } }
 /* ******* VAR ******* */
 /* ******* MIXIN ******* */
 

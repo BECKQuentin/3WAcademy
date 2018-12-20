@@ -24,6 +24,7 @@
 .mainHome_div-tea-chose {
     @include flexColumn;
     text-align: center;
+    flex-wrap: wrap;
 }
 
 .mainHome h2 {
@@ -36,9 +37,6 @@
     text-align: center;
     margin: 20px 0;
     padding: 20px;
-
-
-
 }
 
 .mainHome_button-see-product span {
@@ -50,4 +48,18 @@
     text-decoration: none;
     color: $colorWhite;
     @include buttonProduct
+}
+
+@media screen and (max-width: 768px) {
+    .mainHome_section-tea {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .mainHome-header,
+    .flexslider {
+        display: none
+    }
 }

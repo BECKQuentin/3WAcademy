@@ -75,7 +75,7 @@
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 480px) {
     .header_ribbon {
         display: none;
     }

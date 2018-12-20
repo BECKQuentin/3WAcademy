@@ -34,7 +34,7 @@
     text-transform: uppercase;
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 480px){
     .footer_div-multinav{
     flex-direction: column;
     }
