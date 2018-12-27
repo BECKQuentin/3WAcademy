@@ -15,13 +15,22 @@
             <h1>Ma To do list</h1>
         </header>
         <section class="tackList">
-            <form method="POST" action="form.php">
-                <input type="checkbox" name="task" id="task" value="1">
-                <label for="task"><?php echo $linecreate ?></label>
-                <p><?= $descript ?></p>
-                <input type="button" value="Suprimer">
+            <form method="POST" action="supp.php">
+                <ul><?php  foreach ($tasks as $key =>$task) {?>
+                
+                    
+                    <li>                
+                        <input type="checkbox" name="task[]" id="task" value="1">
+                        <label for="task"><?=$task[0]?>,<?=$task[2]?></label>                        
+                        <p><?=$task[1]?></p>
+                    </li>
+                
+                <?php } ?>
+                </ul>
+
+                <input type="submit" value="Suprimer">
             </form>
-        </section>
+</section>
         <hr>
         <section class="newtask">
             <form action="form.php" method="post">
@@ -61,3 +70,4 @@
 </body>
 
 </html>
+

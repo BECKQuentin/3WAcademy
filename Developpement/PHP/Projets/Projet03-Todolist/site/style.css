@@ -8,10 +8,7 @@ main{
 section {
     margin: 30px;
 }
-form {
-    display: flex;
-    flex-direction: column;
-}
+
 .newtask label:nth-child(1) {
     font-weight: bold;
     display: inline-block;
@@ -23,9 +20,20 @@ fieldset input[type="submit"] {
     width: 100px;
     margin: 20px;
 }
-.tackList>form>p {
+li p {
     display: none;
 }
-.tackList>form:hover>p {
+li:hover p {
     display: block;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+
+}
+li{
+    list-style: none;
+}
+input[type="checkbox"]:checked+label {
+    text-decoration: line-through;
+    color: red;
 }
