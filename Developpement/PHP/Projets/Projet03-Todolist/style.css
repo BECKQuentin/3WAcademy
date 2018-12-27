@@ -1,0 +1,31 @@
+body{
+    background-color: rgb(149, 183, 194);
+}
+main{
+    max-width: 500px;
+    margin: 0 auto;
+}
+section {
+    margin: 30px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+.newtask label:nth-child(1) {
+    font-weight: bold;
+    display: inline-block;
+    width: 100px;
+}
+input[type="button"],
+fieldset input[type="submit"] {
+    display: inline-block;
+    width: 100px;
+    margin: 20px;
+}
+.tackList>form>p {
+    display: none;
+}
+.tackList>form:hover>p {
+    display: block;
+}
