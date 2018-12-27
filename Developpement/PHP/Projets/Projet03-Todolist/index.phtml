@@ -15,16 +15,16 @@
             <h1>Ma To do list</h1>
         </header>
         <section class="tackList">
-            <form method="POST" action="lien.php">
+            <form method="POST" action="form.php">
                 <input type="checkbox" name="task" id="task" value="1">
-                <label for="task">Tache 1</label>
-                <p>Description de la tache</p>
+                <label for="task"><?php echo $linecreate ?></label>
+                <p><?= $descript ?></p>
                 <input type="button" value="Suprimer">
             </form>
         </section>
         <hr>
         <section class="newtask">
-            <form action="lien.php" method="post">
+            <form action="form.php" method="post">
                 <fieldset>
                     <legend>Nouvelle tâche</legend>
                     <div>
