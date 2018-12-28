@@ -34,4 +34,18 @@ function loadTasks()
 
 }
 
+function saveTasks(array $tasks)
+{
+	$file = fopen('tasks.csv', 'w');
+    
+    foreach($tasks as $taskData)
+	{
+    	fputcsv($file, $taskData);
+    }
+    
+    fclose($file);
+
+}
+
+
 ?>
