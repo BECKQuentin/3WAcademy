@@ -13,9 +13,3 @@
  */
 
  $('#run').on('click', clicked);
- function togglePink() {
-
-     $(this).toggleClass('pink');
-     //$(this).addClass('pink');
-     //$(this).removeClass('pink');
- }
