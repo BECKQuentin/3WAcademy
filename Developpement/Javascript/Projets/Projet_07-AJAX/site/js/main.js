@@ -11,3 +11,11 @@
  * Lorsque l'on donne en argument une fonction à jQuery, elle est utilisée comme gestionnaire
  * d'évènements pour l'évènement JavaScript natif DOMContentLoaded.
  */
+
+ $('#run').on('click', clicked);
+ function togglePink() {
+
+     $(this).toggleClass('pink');
+     //$(this).addClass('pink');
+     //$(this).removeClass('pink');
+ }
