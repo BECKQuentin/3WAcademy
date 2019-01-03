@@ -15,8 +15,3 @@ function myFunction(response) {
 function clicked() {
     $.get('php/1-get-html-article.php', myFunction);
 }
-
-
-$('.para').on('click', togglePink);
- $('#run').on('click', clicked);
-
