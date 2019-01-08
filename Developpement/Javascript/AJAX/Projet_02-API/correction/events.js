@@ -17,6 +17,6 @@ function onClickShowDetails() {
     var id = $(this).data('id');
     console.log(id);
 
-    $getJSON('https://api.themoviedb.org/3/movie/' + id + '?api_key=' + API_KEY, displayDetails);
-
+    $.getJSON('https://api.themoviedb.org/3/movie/' + id + '?api_key=' + API_KEY, displayDetails);
+console.log('https://api.themoviedb.org/3/movie/' + id + '?api_key=' + API_KEY + 'test')
 }

@@ -2,7 +2,7 @@ function recupAllMovies(response) {
 
     console.log(response);
     var data = response.results;
-    var list = $('<ul>');
+    var list = $('<ul id="list">');
 
     for (var i = 0; i < data.length; i++) {
         list.append($('<li data-id="' + data[i].id + '">').append(data[i].title));
@@ -38,15 +38,11 @@ function displayDetails(response) {
 
 }
 
-function getCompanyWebSite(id) {
 
-    $.getJSON('https://api.themoviedb.org/3/company/' + id + '?api_key=2ee2c5b569240ea2a2a879dd9c8a822c', displayCompany);
-
-}
 
 function displayCompany(response) {
 
     console.log(response);
-    $('#result ul').append('<li><a href="' + response.homepage + '" id="' + response.id + '">' + response.name + '</li></a>');
+    $('#result ul').append('<li><a href="' + response.homepage + '">' + response.name + '</a></li>');
 
 }

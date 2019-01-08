@@ -1,2 +1,2 @@
 $('#send').on('click', onClickShowListMovies);
-$(document).on('click', 'li', onClickShowDetails);
+$(document).on('click', '#list li', onClickShowDetails);
