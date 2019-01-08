@@ -21,6 +21,7 @@ function displayDetails(response) {
     var year = $('<h2>').append(response.release_date);
     var desc = $('<p>').append(response.overview);
     var note = $('<p>').append(response.vote_average);
+    console.log(response.vote_average)
     var companies = $('<div>').append('<h2>Companies</h2>')
     companies.append('<ul>');
 
