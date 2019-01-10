@@ -10,11 +10,11 @@
 
         <article>
             <?php if (strlen($value['post_contents'])>50){
-                $contentShort = substr($value['post_contents'], 0, 50);
+                $contentShort = htmlspecialchars(substr($value['post_contents'], 0, 50));
                 echo $contentShort;
             }
             else{
-                echo $value['post_contents'];
+                echo htmlspecialchars($value['post_contents']);
             };?> [...]</article>
 
         <small>Rédigé par <?= $value['author_firstName']?> <?= $value['author_lastName']?>, le <?=$value['post_dateCreation']?></small>
