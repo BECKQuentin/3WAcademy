@@ -9,7 +9,7 @@ $pdo = new PDO('mysql:host=localhost;dbname=blog', 'root', 'troiswa');
 $pdo->exec('SET NAMES UTF8');
 $query = $pdo->prepare 
 (
-	'DELETE FROM `Post` WHERE post_id =?'
+	'DELETE FROM `Post`  WHERE post_id =?'
 );
 $query->execute([$_GET['id']]);
 
