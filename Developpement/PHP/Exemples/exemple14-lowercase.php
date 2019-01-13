@@ -1,6 +1,6 @@
 <?php
 
-    $string = "ABcD"
+    $string = "ABcD";
     
     strtolower($string); // "abcd"
 ?>

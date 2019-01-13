@@ -1,4 +1,4 @@
-var tab = [a, b, c, ...]
+var tab = [a, b, c];
 
 for (var i = 0; i < tab.length; i++) {
 
