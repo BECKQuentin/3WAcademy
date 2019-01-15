@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 //Requete PDO
 $pdo = new PDO('mysql:host=localhost;dbname=blog', 'root', 'troiswa');
 $pdo->exec('SET NAMES UTF8');

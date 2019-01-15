@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 $template = 'upload';
 $pdo = new PDO('mysql:host=localhost;dbname=blog', 'root', 'troiswa');

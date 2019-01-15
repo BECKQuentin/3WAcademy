@@ -16,17 +16,33 @@
     <link rel="stylesheet" href="css/ui-form.css">
 </head>
 <body>
-    <!-- En-tête commune de l'application -->
+        <!-- En-tête commune de l'application -->
     <header class="blog-header">
         <h1><a href="index.php"><i class="fa fa-microphone"></i> Encore un Blog ?! #nonMaisAllo</a></h1>
         <nav>
-            <a href="admin.php"><i class="fa fa-cogs"></i> Administration</a>
+
+             <!-- Si connecter  -->
+
+            <?php if(!empty($_SESSION)) {?>
+            <a href="deco.php"><i class="fa fa-cogs"></i> Deconnexion</a>
+            <a href="admin.php"><i class="fa fa-cogs"></i> Gestion de Post</a>
+            <?php };?>
+                        <!-- si tu es super admin  -->
+            <?php if((!empty($_SESSION)) && ($_SESSION['role'] == 'admin')) {?>
+            <a href="bigAdmin.php"><i class="fa fa-cogs"></i> Adiministration</a>
+            <?php };?>
+
+            <!-- si tu es deconnecter -->
+            <?php if(empty($_SESSION)) {?>
+            <a href="login.php"><i class="fa fa-cogs"></i> Login</a>
+            <a href="register.php"><i class="fa fa-cogs"></i> Register</a>
+            <?php };?>
+
             <a href="index.php"><i class="fa fa-home"></i> Accueil</a>
 
         </nav>
     </header>
-
-    <main>
+      <main>
         <!-- Chargement du template PHTML spécifié par le programme PHP -->
         <?php include $template.'.phtml' ?>
     </main>

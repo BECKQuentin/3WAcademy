@@ -1,4 +1,6 @@
-<h2><i class="fa fa-home"></i> Accueil</h2>
+<h2><i class="fa fa-home"></i> Accueil <?php if(!empty($_SESSION)) {?>
+            , Bonjour 
+            <?= $_SESSION['firstName']; }?></h2>
 <!-- Liste des articles du blog -->
 <ul class="post-list">
     <?php foreach ($thePosts as $key => $value ) {?>
