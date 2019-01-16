@@ -1,0 +1,26 @@
+body{
+    background-image: url(img/mario-5-720px.jpg);
+}
+div{
+    width: 500px;
+    margin: 0 auto;
+}
+button{
+    width: 75px;
+    height: 30px;
+    margin: 30px;
+    color: white;
+    border: 1px solid transparent;
+
+    border-radius: 20px;
+}
+#attaquer {
+    background-color: rgb(223, 84, 74);
+}
+#defendre {
+    background-color: rgb(53, 156, 70);
+
+}
+#sort{
+    background-color: rgb(206, 74, 223);
+}
