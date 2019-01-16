@@ -8,20 +8,20 @@ var Perso = function (name, hp, attack, defense, magie) {
 }
 
 
-Perso.prototype.attaquer = function (perso) {
+Perso.prototype.attaquer = function (subbitAttaque) {
 
-    var degats = this.attack - perso.defense;
+    var degats = this.attack - subbitAttaque.defense;
 
     if (degats < 10) {
 
-        console.log(perso.name + 'ne sent plus rien....');
+        console.log(subbitAttaque.name + 'ne sent plus rien....');
         degats = 10
     }
-    perso.hp -= degats
+    subbitAttaque.hp -= degats
 
-    console.log(this.name + ' Attaque, il enlève ' + degats + ' hp a ' + perso.name)
+    console.log(this.name + ' Attaque, il enlève ' + degats + ' hp a ' + subbitAttaque.name)
 
-    console.log(perso.name + ' a  ' + perso.hp + ' hp');
+    console.log(subbitAttaque.name + ' a  ' + subbitAttaque.hp + ' hp');
 }
 
 
@@ -35,14 +35,14 @@ Perso.prototype.defendre = function () {
 }
 
 
-Perso.prototype.sort = function (perso) {
+Perso.prototype.sort = function (subbitSort) {
 
     if (this.magie > 0) {
         var degats = getRandomInteger(1, this.magie);
-        console.log(this.name + ' jete un sort,il enlève ' + degats + ' hp a ' + perso.name);
-        perso.hp -= degats;
+        console.log(this.name + ' jete un sort,il enlève ' + degats + ' hp a ' + subbitSort.name);
+        subbitSort.hp -= degats;
         this.magie -= degats;
-        console.log(perso.name + ' a  ' + perso.hp + ' hp');
+        console.log(subbitSort.name + ' a  ' + subbitSort.hp + ' hp');
     } else {
         console.log('Vous n avez plus de point de magie....')
     }

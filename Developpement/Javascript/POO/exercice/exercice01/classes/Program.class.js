@@ -4,6 +4,7 @@ var Program = function () {
     this.yoshi = new Perso('Yoshi', 255, 123, 135, 132);
 
     $('#attaquer').on('click', this.onClickAttaque.bind('coucou'));
+    //bind : cf mdn = bind creer une nouvelle fonction qui à pour context this 
 }
 
 
