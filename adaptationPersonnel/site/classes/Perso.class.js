@@ -8,8 +8,7 @@ var Perso = function (name, hp, attack, defense, magie) {
 }
 
 
-Perso.prototype.attaquer = function (subbitAttaque) {
-
+Perso.prototype.attaquer = function(subbitAttaque) {
     var degats = this.attack - subbitAttaque.defense;
 
     if (degats < 10) {
@@ -33,7 +32,6 @@ Perso.prototype.defendre = function () {
 
     console.log(this.name + 'a une defense à :' + this.defense);
 }
-
 
 Perso.prototype.sort = function (subbitSort) {
 
