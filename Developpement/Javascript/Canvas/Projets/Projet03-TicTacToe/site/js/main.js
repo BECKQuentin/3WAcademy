@@ -38,17 +38,23 @@ var color = 10;
 document.getElementById('myCanvas').addEventListener('click', function(event){
 
     if(choix){
-       cercle(context, event.offsetX, event.offsetY, color);
-       color += 10
-       choix = false
+        var i = (event.offsetX - 120) / 200;
+        var x = 200 * Math.round(i) + 120;
+        var j = (event.offsetY - 120) / 200;
+        var y = 200 * Math.round(j) + 120;
+        cercle(context, x, y, color);
+        color += 10
+        choix = false
     }else{
-       croix(context, event.offsetX, event.offsetY, color);
+        var i = (event.offsetX - 120) / 200;
+        var x = 200 * Math.round(i) + 120;
+        var j = (event.offsetY - 120) / 200;
+        var y = 200 * Math.round(j) + 120;
+       croix(context, x, y, color);
        color += 10
        choix = true;
     }
 
-    event.offsetX = i
-    event.offsetY = j 
-
 } )
+
 
