@@ -23,7 +23,7 @@ class Program {
     	$position = $this->rectangle->getPosition();
 		$style = $this->rectangle->getStyle();
     
-    	array_push() '<rect x="'.$position['x'].'" y="'.$position['y'].'" width="'.$size['width'].'" height="'.$size['height'].'" fill="'.$style['fill'].'" opacity="'.$style['opacity'].'"></rect>';
+    	return '<rect x="'.$position['x'].'" y="'.$position['y'].'" width="'.$size['width'].'" height="'.$size['height'].'" fill="'.$style['fill'].'" opacity="'.$style['opacity'].'"></rect>';
 	}
 	
 	public function drawCarre() {

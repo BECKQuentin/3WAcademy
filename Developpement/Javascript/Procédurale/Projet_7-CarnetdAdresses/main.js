@@ -54,9 +54,7 @@ function creatList() {
     for (var i = 0; i < datasLocalStrage.length; i++) {
 
         var newItemList = document.createElement('li');
-
         newItemList.innerHTML = '<a href="#" data-item ="' + i + '">' + datasLocalStrage[i].firstName + ' ' + datasLocalStrage[i].lastName + '</a>'
-
         document.getElementById('address-book').appendChild(newItemList);
     }
 
