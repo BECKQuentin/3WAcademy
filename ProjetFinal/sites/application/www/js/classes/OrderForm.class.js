@@ -1,10 +1,14 @@
 'use strict';
 
 var ObjectMeal = function () {
+    
     this.menu = document.getElementById('meal');
     this.mealJson();
     this.menu.addEventListener('change', this.mealJson.bind(this));
-    this.basket = LocalStorage();
+    this.buttonSubmit = document.getElementById('submit');
+    this.buttonSubmit.addEventListener('click', this.recuInfo.bind(this));
+
+    this.basket = new LocalStorage();
 };
 
 ObjectMeal.prototype.mealJson = function() {
@@ -13,13 +17,29 @@ ObjectMeal.prototype.mealJson = function() {
 }
 
 ObjectMeal.prototype.jsonBDD = function (response) {
-       $('#meal-details').html('');
-       $('#meal-details').append('<img src ="' + getWwwUrl() + '/images/meals/' + response.Photo + '" class="imgMealDetail"/>');
-       $('.imgMealDetail').attr('alt', response.Name);
-       $('#meal-details').append('<p>' + response.Description + '</p>');
-       $('#meal-details').append('<span > Prix: <strong >' + formatMoneyAmount(response.SalePrice) + '</strong></span ><br><br><br><br>');
+    $('#meal-details').html('');
+    $('#meal-details').append('<img src ="' + getWwwUrl() + '/images/meals/' + response.Photo + '" class="imgMealDetail"/>');
+    $('.imgMealDetail').attr('alt', response.Name);
+    $('#meal-details').append('<p>' + response.Description + '</p>');
+    $('#meal-details').append('<span > Prix: <strong >' + parseFloat(response.SalePrice).toFixed(2) + '</strong> €</span >');
 
 }
+
+ObjectMeal.prototype.recuInfo = function (e) {
+    e.preventDefault()
+    var idProduct = $('#meal').val();
+
+    var product = $('#meal').find('option:selected').text();
+    var price = $('#meal-details > span > strong').html();
+    var quantity = $('#quantity').val();
+    this.basket.add(idProduct, quantity, product, price);
+}
+
+
+
+
+
+
 
 /*
 $(function () {
