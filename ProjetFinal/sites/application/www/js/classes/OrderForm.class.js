@@ -32,13 +32,10 @@ ObjectMeal.prototype.recuInfo = function (e) {
     var product = $('#meal').find('option:selected').text();
     var price = $('#meal-details > span > strong').html();
     var quantity = $('#quantity').val();
-    this.basket.add(idProduct, quantity, product, price);
+    var img = $('#meal-details img').attr('src');
+
+    this.basket.add(idProduct, quantity, product, price, img);
 }
-
-
-
-
-
 
 
 /*

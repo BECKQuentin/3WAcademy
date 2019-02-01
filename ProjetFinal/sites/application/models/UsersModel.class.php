@@ -53,7 +53,10 @@ class UsersModel {
             $_SESSION['id'] = $user['Id'];
 			$_SESSION['email'] = $user['Email'];
 			$_SESSION['firstName'] = $user['FirstName'];
-			$_SESSION['lastName'] = $user['LastName'];
+            $_SESSION['lastName'] = $user['LastName'];
+            $_SESSION['address'] = $user['Address'];
+            $_SESSION['city'] = $user['City'];
+            $_SESSION['zipCode'] = $user['ZipCode'];
 
  
         } else {
@@ -74,7 +77,8 @@ class UsersModel {
     private function verifyPassword($password, $hashedPassword)
 	{
 		return crypt($password, $hashedPassword) == $hashedPassword;
-	}
+    }
+
 }
 		
 

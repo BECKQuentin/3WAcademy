@@ -38,17 +38,17 @@
 
     <fieldset>
         <legend>Récapitulatif de la commande</legend>
-        <section id="order-summary nullTab" class="">
+        <section id="order-summary " class="nullTab ">
             <table  class="generic-table">
                 <tbody>
                     <tr>
-                        <th class="basket-empty ">Votre panier est vide pour le moment !</th>
+                        <td class="basket-empty ">Votre panier est vide pour le moment !</td>
                     </tr>
                 </tbody>
             </table>
         </section>
 
-        <section id="order-summary orderTab " class='hidden'>
+        <section id="order-summary" class='orderTab'>
             <table  class="generic-table ">
                 <thead>
                     <tr>
@@ -68,8 +68,8 @@
     
 <ul class="link-list">
     <li>
-        <a href="/Restaurant (corrigé)/index.php/order/payment?id=27"></a><button   class="button button-primary valid">Valider la commande</button></a>
-        <a class="button button-cancel small" href="/Restaurant (corrigé)/index.php">Annuler</a>
+        <a href="<?= $requestUrl ?>/validate"><button class="button button-primary valid">Valider la commande</button></a>
+        <a class="button button-cancel small" href="<?= $requestUrl ?>">Annuler</a>
     </li>
 </ul>
 
