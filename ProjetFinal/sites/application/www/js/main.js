@@ -9,5 +9,11 @@
 /////////////////////////////////////////////////////////////////////////////////////////
 // CODE PRINCIPAL                                                                      //
 /////////////////////////////////////////////////////////////////////////////////////////
+if (document.location.href.indexOf("order") != -1 ) {
+    var order = new ObjectMeal();
 
-var order = new ObjectMeal();
+}
+
+if (document.location.href.indexOf("validate") != -1) {
+    var orderList = new ValidateOrder();
+}

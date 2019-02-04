@@ -4,6 +4,7 @@ var ObjectMeal = function () {
     
     this.menu = document.getElementById('meal');
     this.mealJson();
+
     this.menu.addEventListener('change', this.mealJson.bind(this));
     this.buttonSubmit = document.getElementById('submit');
     this.buttonSubmit.addEventListener('click', this.recuInfo.bind(this));
@@ -36,6 +37,8 @@ ObjectMeal.prototype.recuInfo = function (e) {
 
     this.basket.add(idProduct, quantity, product, price, img);
 }
+
+
 
 
 /*

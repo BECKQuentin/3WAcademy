@@ -4,9 +4,9 @@
     <h2><i class="fa fa-check"></i> Payer la commande</h2>
 
 <section class="invoice">
-    <p><strong>Thib Mones</strong></p>
-    <p>208 rue du faubourg Saint-Denis</p>
-    <p>75010 <span class="city">Paris</span></p>
+    <p><strong><?= $_SESSION['firstName']; ?>  <?= $_SESSION['lastName']; ?></strong></p>
+    <p><?= $_SESSION['address']; ?></p>
+    <p><?= $_SESSION['zipCode']; ?> <span class="city"><?= $_SESSION['city']; ?></span></p>
 </section>
 
 <table class="generic-table meal-list">
@@ -19,6 +19,9 @@
             <th class="number">Prix Total</th>
         </tr>
     </thead>
+    <tbody>
+
+    </tbody>
     <tfoot>
         <tr>
             <td colspan="3">Total HT</td>
@@ -33,22 +36,16 @@
             <td id="totalttc" class="colorful"></td>
         </tr>
     </tfoot>
-    <tbody>
-
-    </tbody>
 </table>
 
 <hr>
 <h3>Merci de bien vouloir procéder au paiement de la commande.</h3>
-<form class="generic-form" action="/resto/index.php/order/payment" method="POST">
+<form class="generic-form" action="<?= $requestUrl ?>/payment" method="POST">
 	<ul>
         <input id="orderValidation" type="hidden" name="order" value="">
 		<li>
 			<input class="button button-primary" type="submit" value="Payer">
-			<a class="button button-cancel small" href="/resto/index.php">Annuler</a>
+			<a class="button button-cancel small" href="<?= $requestUrl ?>">Annuler</a>
 		</li>
 	</ul>
 </form>
-
-<script src="/resto/application/www/js/classes/BasketSession.class.js"></script>
-<script src="/resto/application/www/js/classes/RecapValidate.class.js"></script></main>

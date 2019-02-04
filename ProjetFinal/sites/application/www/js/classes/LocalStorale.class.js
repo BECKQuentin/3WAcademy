@@ -67,14 +67,13 @@ LocalStorage.prototype.write = function () {
             var price = parseFloat(this.item[i].price);
             var totalPrice = quantity * price;
             
-
             $('.orderTab tbody').css('text-align', 'right')
             $('.orderTab tbody').append('<tr id="' + id + '">');
             $('.orderTab tbody').append('<td>' + quantity + '</td>');
             $('.orderTab tbody').append('<td>' + product + '</td>');
             $('.orderTab tbody').append('<td>' + this.item[i].price + ' €</td>');
             $('.orderTab tbody').append('<td>' + totalPrice.toFixed(2) + ' €</td>');
-            $('.orderTab tbody').append('<td><button class="button button-cancel small title="Supprimer article" data-mealid="'+i+'"><i class="fa fa-trash"></i></button></td>');
+            $('.orderTab tbody').append('<td><button class=" button-cancel trash small" title="Supprimer article" data-mealid="'+i+'"><i class="fa fa-trash"></i></button></td>');
             $('.orderTab tbody').append('</tr>');
         }
 
@@ -93,3 +92,4 @@ LocalStorage.prototype.delete = function(e) {
     this.save();
     this.write();
 }
+

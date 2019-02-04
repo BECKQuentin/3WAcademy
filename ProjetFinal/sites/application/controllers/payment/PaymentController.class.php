@@ -1,6 +1,6 @@
 <?php
 
-class ValidateController
+class PaymentController
 {
     public function httpGetMethod(Http $http, array $queryFields)
     {
@@ -11,12 +11,7 @@ class ValidateController
     	 * L'argument $queryFields contient l'équivalent de $_GET en PHP natif.
     	 */
 
-/*         $meal = new MealModel();   
-		$meet =  $meal->listAll();
-		var_dump($meet);
-		return  [
-			'meals' => $meet
-		]; */
+
 	}
 
     public function httpPostMethod(Http $http, array $formFields)
@@ -27,7 +22,20 @@ class ValidateController
     	 * L'argument $http est un objet permettant de faire des redirections etc.
     	 * L'argument $formFields contient l'équivalent de $_POST en PHP natif.
     	 */
+		$dataJson = json_decode($_POST['order']);
+		var_dump($dataJson);
 
-    }
+		$meal = new MealModel();  
+
+		foreach ($dataJson as $key) {
+			$data = $meal->mealElement($key->idProduct);
+			var_dump($data);
+			$key->safePrice = $data['SalePrice'];
+		}
+
+		$orders = new OrderModel();  
+ 		$orderData =  $orders-> newOrder($_SESSION['id']);
+
+	}
 }
 ?>
