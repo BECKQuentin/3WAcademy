@@ -1,41 +1,36 @@
-<?php
 
+<?php
 class PaymentController
 {
     public function httpGetMethod(Http $http, array $queryFields)
     {
-    	/*
-    	 * Méthode appelée en cas de requête HTTP GET
-    	 *
-    	 * L'argument $http est un objet permettant de faire des redirections etc.
-    	 * L'argument $queryFields contient l'équivalent de $_GET en PHP natif.
-    	 */
-
-
-	}
-
+      if(array_key_exists('lastName', $_SESSION) == false) {
+        $http->redirectTo('/user/login/');
+      }
+    }
     public function httpPostMethod(Http $http, array $formFields)
-    {
-    	/*
-    	 * Méthode appelée en cas de requête HTTP POST
-    	 *
-    	 * L'argument $http est un objet permettant de faire des redirections etc.
-    	 * L'argument $formFields contient l'équivalent de $_POST en PHP natif.
-    	 */
-		$dataJson = json_decode($_POST['order']);
-		var_dump($dataJson);
+    {  var_dump($_SESSION);
 
-		$meal = new MealModel();  
+		var_dump($_POST);
+		$invoices = json_decode($_POST['order']);
 
-		foreach ($dataJson as $key) {
-			$data = $meal->mealElement($key->idProduct);
-			var_dump($data);
-			$key->safePrice = $data['SalePrice'];
-		}
+		$mealModel = new MealModel();
+        $order = new OrderModel();
+        $orderId = $order->addOrder($_SESSION['id']);
+		$totalAmount = 0;
+		
+        foreach ($invoices as $invoice) {
+			$menu = $mealModel->mealElement($invoice->idProduct);
+			
 
-		$orders = new OrderModel();  
- 		$orderData =  $orders-> newOrder($_SESSION['id']);
+			$invoice->safePrice = $menu['SalePrice'];
+			$totalAmount += floatval($invoice->safePrice)*intval($invoice->quantity);
 
-	}
+			$order->addOrderLine($orderId, $invoice);
+
+			var_dump($order);
+        }
+        $order->addTotalAmount($orderId, $totalAmount);
+
+    }
 }
-?>
