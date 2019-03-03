@@ -1,0 +1,358 @@
+/* *************************************************************************** */
+/* GENERALITIES                                                                */
+/* *************************************************************************** */
+
+* {
+-webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+        box-sizing: border-box;
+}
+body {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	color: #8F8F8F;
+	background-color: #fff;
+}
+a {
+	text-decoration: none;
+	color: #4a9ba9;
+}
+a:hover {
+	text-decoration: underline;
+	color: #8F8F8F;
+}
+button.primary {
+	color: #fff;
+	background-image: -webkit-linear-gradient(top, #f73e75, #df3867);
+	border: 1px solid #df3867;
+}
+form button.primary:hover {
+	color: #eee;
+	background-image: -webkit-linear-gradient(bottom, #f73e75, #df3867);
+	border: 1px solid #ce2756;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.25) inset;
+}
+blockquote::before {
+	content: none;
+}
+
+/* *************************************************************************** */
+/* CONTAINER                                                                     */
+/* *************************************************************************** */
+
+.container {
+	width: 940px;
+	margin: 0 auto;
+}
+
+@media screen and (max-width: 960px) {
+	.container {
+		width: 96%;
+	}
+}
+
+/* *************************************************************************** */
+/* GRID                                                                     */
+/* *************************************************************************** */
+
+
+@media screen and (max-width: 960px) {
+	.grid-2-1.small-1 > * {
+		width: calc(100% - 1em);
+		margin-bottom: 1em;
+	}
+	.grid-2-1.small-1 .txtright {
+	    text-align: left;;
+	}
+}
+@media screen and (max-width: 480px) {
+	.grid-2-1.small-1  .logo {
+		margin: 0.5em 1em;
+	}
+	.grid-2-1.small-1  .button {
+		display: block;
+		margin: 0.5em 1em;
+	}
+}
+
+
+/* *************************************************************************** */
+/* SPRITES                                                                     */
+/* *************************************************************************** */
+
+i.ico {
+	width: 14px;
+	height: 14px;
+	margin-right: 0.5em;
+	display: inline-block;
+	vertical-align: middle;
+	background-image: url('images/glyphicons-halflings.png');
+}
+i.ico.ico-user {
+	background-position: -168px -0px;
+}
+i.ico.ico-edit {
+	background-position: -96px -72px;
+}
+
+/* *************************************************************************** */
+/* HEADER                                                                      */
+/* *************************************************************************** */
+
+header {
+	padding: 1em 0;
+}
+header a {
+	display: inline-block;
+	vertical-align: middle;
+}
+header .button {
+	display: inline-block;
+	padding: 0.7em 1em;
+	margin-left: 0.5em;
+	text-decoration: none;
+	font-size: 0.9em;
+	font-weight: bold;
+	color: #777;
+	background-color: #eee;
+	border-radius: 4px;
+}
+header .button:hover {
+	color: #666;
+	background-color: #ddd;
+}
+
+/* *************************************************************************** */
+/* SEARCH                                                                      */
+/* *************************************************************************** */
+
+.search {
+	background-color: #8FBEC5;
+	padding: 1em 0;
+}
+.search h1 {
+	margin: 0;
+	padding: 0 0 1em;
+	text-align: center;
+	font-size: 1.8em;
+	font-weight: normal;
+	color: #fff;
+}
+.search .slider {
+	min-height: 290px;
+	padding: 0.5em;
+	background-color: #fff;
+	box-shadow: 2px 2px 0 rgba(0,0,0,0.15);
+	border-radius: 4px;
+}
+.search figure {
+	margin: 0;
+	padding: 0.5em;
+}
+.search figure img {
+	width: 100%;
+	height: auto;
+}
+.search figure figcaption {
+	display: block;
+	padding: 1em 0 0.5em;
+	font-size: 1.3em;
+	font-weight: bold;
+	color: #636;
+}
+.search .form {
+	min-height: 290px;
+	padding: 0.5em;
+	text-align: center;
+	background-color: #eee;
+	background-image: -webkit-linear-gradient(top, #fff, #eee);
+	box-shadow: 2px 2px 0 rgba(0,0,0,0.15);
+	border-radius: 4px;
+}
+.search .form h2 {
+	margin: 0.5em;
+	font-size: 1.8em;
+	font-weight: bold;
+	color: #DD3364;
+}
+.search .form h3 {
+	margin: 0.5em;
+	font-size: 1em;
+	font-weight: normal;
+	color: #4a9ba9;
+}
+.search .form p {
+	margin: 0.5em;
+	font-size: 1em;
+}
+.search .form input, .search .form button {
+	display: inline-block;
+	width: 90%;
+	margin: 0.5em 0;
+	padding: 0.5em;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+/* *************************************************************************** */
+/* ARTICLES                                                                      */
+/* *************************************************************************** */
+
+.articles {
+	margin-bottom: 1em;
+	padding: 1em 0;
+	border-bottom: 1px dotted #ccc;
+}
+.articles h1 {
+	margin: 0.5em 0;
+	padding: 0;
+	font-size: 1.3em;
+	font-weight: normal;
+	color: #4a9ba9;
+}
+
+/* *************************************************************************** */
+/* HEROS                                                                      */
+/* *************************************************************************** */
+
+.heros {
+	padding: 1em 0;
+}
+.heros h1 {
+	margin: 0.5em;
+	font-size: 1.4em;
+	font-weight: bold;
+	color: #DD3364;
+}
+.heros figure {
+	padding: 0.5em;
+	box-shadow: 2px 2px 0 rgba(0,0,0,0.15);
+	border-radius: 4px;
+}
+.heros figure img {
+	width: 100%;
+	height: auto;
+}
+.heros figure h2 {
+	margin: 0.5em;
+	font-size: 1em;
+	font-weight: normal;
+	color: #DD3364;
+}
+.heros figure h2 {
+	margin: 0.5em 0;
+	font-size: 1em;
+}
+
+/* *************************************************************************** */
+/* TROUVER                                                                     */
+/* *************************************************************************** */
+
+.trouver {
+	margin: 0.5em auto;
+	padding: 0.5em;
+	background-color: #eee;
+	border-radius: 4px;
+}
+.trouver input, .trouver select, .trouver button {
+	display: inline-block;
+	width: 30%;
+	margin: 0.5em 0;
+	margin-left: 1.5em;
+	padding: 0.5em;
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	vertical-align: middle;
+}
+.trouver select {
+	height: 2.2em;
+}
+.trouver button {
+	width: auto;
+}
+
+/* *************************************************************************** */
+/* CITATIONS                                                                      */
+/* *************************************************************************** */
+
+.citations {
+	padding: 1em 0;
+}
+.citations>div {
+	padding: 1em 0;
+}
+.citations h1 {
+	margin: 0.5em;
+	font-size: 1.4em;
+	font-weight: bold;
+	color: #DD3364;
+}
+.citations img {
+	vertical-align: middle;
+}
+.citations blockquote {
+	margin-top: 0;
+	padding: 0;
+	font-style: italic;
+}
+.citations blockquote cite {
+	display: block;
+	margin: 1em 0;
+	font-style: normal;
+	color: #999;
+}
+
+/* *************************************************************************** */
+/* CATEGORIES                                                                  */
+/* *************************************************************************** */
+
+.categories {
+	padding: 1em 0;
+}
+.categories ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.categories li {
+	padding: 0.25em;
+	list-style: none;
+}
+
+/* *************************************************************************** */
+/* ABOUT                                                                       */
+/* *************************************************************************** */
+
+.about {
+	color: #fff;
+	background-color: #8FBEC5;
+	padding: 1em 0;
+}
+.about a {
+	color: #fff;
+}
+.about ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.about li {
+	padding: 0.25em;
+	list-style: none;
+}
+.about h2 {
+	margin: 0 0 0.5em;
+	font-size: 1.1em;
+}
+
+/* *************************************************************************** */
+/* MENTIONS                                                                       */
+/* *************************************************************************** */
+
+.mentions {
+	margin: 1em auto;
+	padding: 1em 0;
+	border-top: 1px dotted #ccc;
+}
